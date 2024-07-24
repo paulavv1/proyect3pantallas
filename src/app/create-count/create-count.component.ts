@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-create-count',
-  standalone: true,
-  imports: [],
-  templateUrl: './create-count.component.html',
-  styleUrl: './create-count.component.css'
+  selector: 'app-login',
+  templateUrl: '/src/app/create-account/create-account.component.html',
+  styleUrls: ['/src/app/create-account/create-account.component.css']
 })
-export class CreateCountComponent {
+export class CreateAccountComponent {
+  constructor(private router: Router) {}
 
+  onLogin() {
+    console.log('Iniciar sesión');
+    this.router.navigate(['/login']);
+  }
 }
